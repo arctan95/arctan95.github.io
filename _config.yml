@@ -7,7 +7,7 @@
 
 # Site settings
 title: 谭志强的个人主页
-brief-intro: Android and Python Coder
+brief-intro: 爱拼才会赢！
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arctan95.github.io" # the base hostname & protocol for your site
 
@@ -18,9 +18,9 @@ twitter_username: #gaohaoyang126
 facebook_username: #gaohaoyang.water
 github_username:  arctan95
 email: 1626194321@qq.com
-weibo_username: xxxx
-zhihu_username: xxxx
-linkedIn_username: xxxx
+weibo_username: #xxxx
+zhihu_username: #xxxx
+linkedIn_username: #xxxx
 dribbble_username:
 
 description_footer: 来自谭志强的个人主页！
