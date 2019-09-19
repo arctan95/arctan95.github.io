@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 谭志强的个人主页
-brief-intro: 爱拼才会赢！
+title: arctan95
+brief-intro: Practice makes perfect.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arctan95.github.io" # the base hostname & protocol for your site
 
@@ -23,7 +23,7 @@ zhihu_username: #xxxx
 linkedIn_username: #xxxx
 dribbble_username:
 
-description_footer: 来自谭志强的个人主页！
+description_footer: from arctan95
 
 # comments
 # two ways to comment, only choose one, and use your own short name
