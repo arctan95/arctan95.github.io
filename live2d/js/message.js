@@ -10,7 +10,7 @@ function renderTip(template, context) {
         for (i = 0, length = variables.length; i < length; ++i) {
             variable = variables[i];
             currentObject = currentObject[variable];
-            if (currentObject === undefined || currentObject === null) return '';
+            if (currentObject == undefined || currentObject == null) return '';
         }
         return currentObject;
     });
