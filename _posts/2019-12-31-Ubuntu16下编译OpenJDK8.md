@@ -3,10 +3,9 @@ title: Ubuntu16下编译OpenJDK8
 layout: post
 categories: JAVA
 tags: JVM
-excerpt: ttttt
 ---
 最近在读《深入理解Java虚拟机》，看完第一部分想着自己动手编译一套JDK，毕竟想要深入了解JDK内部实现，跟踪调试JDK源码是最便捷的路径。闲话不多说，正文开始。
-
+<!-- more -->
 #### 1.获取OpenJDK源码 
 我使用的OpenJDK版本：openjdk-8u40-src-b25-10_feb_2015
 从官网下载：http://jdk.java.net/java-se-ri/8va-se-ri/8
