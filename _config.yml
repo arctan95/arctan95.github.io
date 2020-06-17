@@ -28,8 +28,8 @@ description_footer: From arctan95!
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: #tanblog
-#disqus_shortname: #tanblog
+# duoshuo_shortname: arctan95
+disqus_shortname: arctan95
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
