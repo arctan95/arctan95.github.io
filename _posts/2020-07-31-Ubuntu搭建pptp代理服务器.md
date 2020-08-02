@@ -5,43 +5,58 @@ categories: Linux
 tags: 计算机网络
 ---
 最近使用Ubuntu搭建了pptp代理服务器，成功绕过了校园网认证（白嫖使我快乐），这里记录一下主要步骤：
+
 #### 1. 安装pptp
+
 ```sudo apt-get install pptpd```
+
 #### 2. 修改pptpd.conf中的配置信息
+
 ```sudo vim /etc/pptpd.conf``` 
 <!-- more -->
 在末尾增加下面两行，或者打开的内容里面找到这两行，取消掉注释
+
 ```
 localip  192.168.0.1
 remoteip 192.168.0.234-238,192.168.0.245
 ```
+
 分别为创建pptp时的主机ip和连接pptp的其他主机使用的ip段，可以自行修改。
 注意，这里的ip并不是指外网ip或者当前局域网ip，而是指创建（虚拟专用网络）会分配的ip地址。一般这个可以不用修改。
 
 #### 3. 修改chap-secrets配置
+
 连接pptp 所需要的账号和密码，修改配置文件/etc/ppp/chap-secrets
 
 ```sudo vim /etc/ppp/chap-secrets```
+
 在末尾添加以下内容
+
 ```
 #用户名 pptpd 密码 *
 tan  pptpd  123456  *
 ```
+
 末尾的`*`表示可以使用任意IP连入，如果你要设置指定IP才能连接，可以将替换成对应的IP。支持添加多个账号。
 
-4. 设置ms-dns
+#### 4. 设置ms-dns
+
 配置使用的dns，修改配置文件
+
 ```sudo vim /etc/ppp/pptpd-options```
 
 在末尾增加下面两行，或者打开的内容里面找到这两行，取消掉注释
+
 ```
 # 这是谷歌的DNS 可以根据实际填写
 ms-dns 8.8.8.8
 ms-dns 8.8.4.4
 ```
 
-5. 开启转发
+#### 5. 开启转发
+
 修改配置文件
+
 ```sudo vim /etc/sysctl.conf```
 
 在末尾增加下面内容，或者打开的内容里面找到这一行，取消掉注释
@@ -53,26 +68,44 @@ ms-dns 8.8.4.4
 ```sudo sysctl -p```
 
 #### 6. 配置iptables
+
 若未安装iptables 执行脚本安装
+
+
+
 ```sudo apt-get install iptables```
 
+
+
 > tips：若之前安装pptp失败的。执行以下脚本；如果是第一次安装可忽略以下内容（目的为了清除iptables里旧的规则）
+
+
+
+
+
 ```
  1. sudo iptables -F
  2. sudo iptables -X
  3. sudo iptables -t nat -F
  4. sudo iptables -t nat -X
- ```
+```
+
 然后，允许GRE协议以及1723端口、47端口：
+
 ```
 sudo iptables -A INPUT -p gre -j ACCEPT 
 sudo iptables -A INPUT -p tcp --dport 1723 -j ACCEPT 
 sudo iptables -A INPUT -p tcp --dport 47 -j ACCEPT
 ```
+
 下一步，开启NAT转发：
+
 ```
 sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eno33 -j MASQUERADE
 ```
+
 注意，上面的eno33是连接网络的网卡的名称，不同机器这个可能是不一样的。可以在终端输入ifconfig来查看
-7. 重启pptp服务
+
+#### 7. 重启pptp服务
+
 ```sudo service pptpd restart```
