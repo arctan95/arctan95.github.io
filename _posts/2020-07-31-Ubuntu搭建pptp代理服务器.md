@@ -111,3 +111,12 @@ sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eno33 -j MASQUERADE
 #### 7. 重启pptp服务
 
 ```sudo service pptpd restart```
+
+#### 8.无法上网问题解决
+有时会出现VPN可以拨上，而且可以 ping 通外网，但上网速度会很慢，很多页面打不开的情况，这是因为MTU过大，将MTU的值配置为1356即可。可以在iptables里增加如下规则： 
+
+```
+sudo iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
+```
+
+不过最终iptables中 mss 的设置还是要以服务端的默认配置为准，通过netstat -i 查看得到ppp0口的mtu值 ，再做mtu-20字节的IP头部-20字节的TCP头部=1356 ，计算出iptables中需要设置的mss的值。
