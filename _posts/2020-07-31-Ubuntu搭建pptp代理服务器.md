@@ -107,6 +107,8 @@ sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eno33 -j MASQUERADE
 ```
 
 注意，上面的eno33是连接网络的网卡的名称，不同机器这个可能是不一样的。可以在终端输入ifconfig来查看
+> tips：iptables里的规则在重启后会失效，所以可把这些规则写入开机启动命令中，Ubuntu可以通过编辑`/etc/rc.local`来实现。 
+
 
 #### 7. 重启pptp服务
 
