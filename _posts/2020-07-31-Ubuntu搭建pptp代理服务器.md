@@ -4,6 +4,7 @@ layout: post
 categories: Linux
 tags: 计算机网络
 ---
+{:toc}
 最近使用Ubuntu搭建了pptp代理服务器，成功绕过了校园网认证（白嫖使我快乐），这里记录一下主要步骤：
 
 #### 1. 安装pptp
