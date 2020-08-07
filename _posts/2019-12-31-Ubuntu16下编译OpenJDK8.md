@@ -4,6 +4,8 @@ layout: post
 categories: JAVA
 tags: JVM
 ---
+* TOC
+{:toc}
 最近在读《深入理解Java虚拟机》，看完第一部分想着自己动手编译一套JDK，毕竟想要深入了解JDK内部实现，跟踪调试JDK源码是最便捷的路径。闲话不多说，正文开始。
 <!-- more -->
 #### 1.获取OpenJDK源码 
