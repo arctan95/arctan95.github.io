@@ -1,2 +1,2 @@
 # This is my personal site!
-Recent posts:[文件名](./other-file.md "鼠标浮动显示文案")
+[Recent posts](./_posts "最近发布文章")
