@@ -124,3 +124,42 @@ sudo iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
 ```
 
 不过最终iptables中 mss 的设置还是要以服务端的默认配置为准，通过netstat -i 查看得到ppp0口的mtu值 ，再做mtu-20字节的IP头部-20字节的TCP头部=1356 ，计算出iptables中需要设置的mss的值。
+
+#### 9.PPTP客户端连接VPN
+windows或手机VPN客户端的配置较简单，这里主要记录下linux上VPN客户端的配置
+
+首先需要安装客户端:
+
+```sudo apt-get install pptp-linux```
+
+然后创建配置文件:
+
+```sudo vim /etc/ppp/peers/pptpconf```
+
+进行如下配置
+```
+// 添加如下内容：（自行更改IP, name, password）
+pty "pptp xxx.xxx.xxx.xxx --nolaunchpppd"
+name xxx
+password xxx
+remotename PPTP
+require-mppe-128
+require-mschap-v2
+refuse-eap
+refuse-pap
+refuse-chap
+refuse-mschap
+noauth
+persist
+maxfail 0
+defaultroute
+replacedefaultroute
+usepeerdns
+```
+
+启动 & 关闭
+
+```
+启动：sudo pon pptpconf 
+关闭：sudo poff pptpconf
+```
