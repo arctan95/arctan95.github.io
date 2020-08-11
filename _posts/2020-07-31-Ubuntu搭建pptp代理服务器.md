@@ -156,6 +156,7 @@ defaultroute
 replacedefaultroute
 usepeerdns
 ```
+也可以使用```pptpsetup --create 连接名称 --server 你的服务器 --username 你的账户 --password 你的密码 --encrypt --start```创建连接，并且执行完之后在/etc/ppp/chap-secrets这个文件会多出两行，第一行是注释掉的说明，第二行是参数，格式如此：```你的账户 pptp "你的密码" *```，注意别掉了星号。还有在/etc/ppp/peers/这个目录下多出一个以连接名称命名的文件
 
 启动 & 关闭
 
