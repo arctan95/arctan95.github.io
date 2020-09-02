@@ -95,21 +95,21 @@ server {
  }
 ```
 
-## 启动Nginx
+## 启动nginx
 
-运行`./sbin/nginx`启动Nginx。
+运行`/usr/local/nginx/sbin/nginx`启动nginx。
 
 Nginx命令参考：
 
 ```
 # Start Nginx
-./sbin/nginx
+/usr/local/nginx/sbin/nginx
 
 # Reload Nginx configuration
-./sbin/nginx -s reload
+/usr/local/nginx/sbin/nginx -s reload
 
 # Stop Nginx
-./sbin/nginx -s stop
+/usr/local/nginx/sbin/nginx -s stop
 ```
 
 ## 查看端口
