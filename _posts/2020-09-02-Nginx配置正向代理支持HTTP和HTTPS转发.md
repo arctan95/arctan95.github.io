@@ -1,8 +1,8 @@
 ---
 title: Nginx配置正向代理支持HTTP和HTTPS转发
 layout: post
-categories: 计算机网络
-tags: Linux
+categories: Linux
+tags: 计算机网络
 ---
 * TOC
 {:toc} 
@@ -15,7 +15,7 @@ Nginx本身不支持HTTPS正向代理，需要安装`ngx_http_proxy_connect_modu
 
 - [https://github.com/chobits/ngx_http_proxy_connect_module\](https://github.com/chobits/ngx_http_proxy_connect_module\)
 
-<!--more-->
+<!- -more -->
 
 ## 安装编译环境和工具
 
