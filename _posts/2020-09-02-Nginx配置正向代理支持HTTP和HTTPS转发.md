@@ -13,7 +13,7 @@ Nginx本身不支持HTTPS正向代理，需要安装`ngx_http_proxy_connect_modu
 
 参考文档：
 
-- [https://github.com/chobits/ngx_http_proxy_connect_module\](https://github.com/chobits/ngx_http_proxy_connect_module\)
+- https://github.com/chobits/ngx_http_proxy_connect_module\
 
 <!- -more -->
 
