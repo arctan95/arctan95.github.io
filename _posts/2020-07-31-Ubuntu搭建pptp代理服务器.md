@@ -163,4 +163,5 @@ usepeerdns
 ```
 启动：sudo pon pptpconf 
 关闭：sudo poff pptpconf
+route add -net 0.0.0.0 dev ppp0 //添加默认路由
 ```
