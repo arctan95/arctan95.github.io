@@ -134,7 +134,7 @@ windows或手机VPN客户端的配置较简单，这里主要记录下linux上VP
 
 然后创建配置文件:
 
-```sudo vim /etc/ppp/peers/pptpconf```
+```sudo vim /etc/ppp/peers/pptp```
 
 进行如下配置
 ```
@@ -161,7 +161,7 @@ usepeerdns
 启动 & 关闭
 
 ```
-启动：sudo pon pptpconf 
-关闭：sudo poff pptpconf
+启动：sudo pon pptp
+关闭：sudo poff pptp
 route add -net 0.0.0.0 dev ppp0 //添加默认路由
 ```
