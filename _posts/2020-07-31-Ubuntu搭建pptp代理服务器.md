@@ -105,7 +105,7 @@ sudo iptables -A INPUT -p tcp --dport 47 -j ACCEPT
 下一步，开启NAT转发：
 
 ```
-sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eno33 -j MASQUERADE
+sudo iptables -t nat -A POSTROUTING -o eno33 -j MASQUERADE
 ```
 
 注意，上面的eno33是连接网络的网卡的名称，不同机器这个可能是不一样的。可以在终端输入ifconfig来查看
