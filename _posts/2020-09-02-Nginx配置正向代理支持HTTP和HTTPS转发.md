@@ -1,9 +1,13 @@
 ---
 title: Nginx配置正向代理支持HTTP和HTTPS转发
+date: 2020-09-02 00:00:00 Z
+categories:
+- Linux
+tags:
+- 计算机网络
 layout: post
-categories: Linux
-tags: 计算机网络
 ---
+
 * TOC
 {:toc} 
 

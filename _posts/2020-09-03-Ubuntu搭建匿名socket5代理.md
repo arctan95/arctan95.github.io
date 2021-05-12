@@ -1,9 +1,13 @@
 ---
 title: Ubuntu搭建匿名socket5代理
+date: 2020-09-03 00:00:00 Z
+categories:
+- Linux
+tags:
+- 计算机网络
 layout: post
-categories: Linux
-tags: 计算机网络
 ---
+
 * TOC
 {:toc}
 前面使用nginx和squid配置的正向代理都是基于HTTP或者HTTPS协议，对于其他协议如UDP协议就无能为力了，这里介绍全能代理socket5，实现全面的白嫖！

@@ -1,9 +1,13 @@
 ---
 title: Ubuntu搭建pptp代理服务器
+date: 2020-07-31 00:00:00 Z
+categories:
+- Linux
+tags:
+- 计算机网络
 layout: post
-categories: Linux
-tags: 计算机网络
 ---
+
 * TOC
 {:toc}
 最近使用Ubuntu搭建了pptp代理服务器，成功绕过了校园网认证（白嫖使我快乐），这里记录一下主要步骤：

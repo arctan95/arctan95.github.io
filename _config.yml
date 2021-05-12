@@ -1,61 +1,37 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+---
 title: arctan95
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 brief-intro: Practice makes perfect.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://arctan95.github.io" # the base hostname & protocol for your site
-
-permalink: /:year/:month/:day/:title/
-
-# other links
+baseurl: ''
+url: https://arctan95.github.io
+permalink: "/:year/:month/:day/:title/"
 twitter_username: 
 facebook_username: 
 github_username: arctan95
 email: 1626194321@qq.com
-weibo_username: #xxxx
-zhihu_username: #xxxx
-linkedIn_username: #xxxx
-dribbble_username:
-
+weibo_username: 
+zhihu_username: 
+linkedIn_username: 
+dribbble_username: 
 description_footer: From arctan95!
-
-# comments
-# multiple ways to comment, only choose one, and use your own short name
-# duoshuo_shortname: arctan95
-# disqus_shortname: arctan95
 gitalk_shortname: arctan95
-
-# statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
 baidu_tongji_id: 2b1b98768ccf69f7ce8c774a56409cbe
-google_analytics_id: # google 分析追踪id
-
-# Build settings
+google_analytics_id: 
 markdown: kramdown
-
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
-# port
-# port: 1234
-
-# url
 category_dir: category/
 tag_dir: tag/
-
-# excerpt
 excerpt_separator: "<!-- more -->"
-
-# paginate
-plugins: [jekyll-paginate]
+plugins:
+- jekyll-paginate
 paginate: 6
 port: 4001
